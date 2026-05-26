@@ -1,4 +1,4 @@
-package cz.jirik.quantdrop.client;
+package com.djdevs.quantdrop.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

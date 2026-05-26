@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "cz.jirik.quantdrop.client.mixin",
+	"package": "com.djdevs.quantdrop.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"AbstractContainerScreenAccessor",

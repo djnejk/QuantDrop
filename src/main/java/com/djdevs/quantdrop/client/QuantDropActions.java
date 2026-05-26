@@ -1,6 +1,6 @@
-package cz.jirik.quantdrop.client;
+package com.djdevs.quantdrop.client;
 
-import cz.jirik.quantdrop.client.mixin.AbstractContainerScreenAccessor;
+import com.djdevs.quantdrop.client.mixin.AbstractContainerScreenAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.world.Container;

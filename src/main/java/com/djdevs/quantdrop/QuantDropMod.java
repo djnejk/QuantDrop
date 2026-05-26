@@ -1,4 +1,4 @@
-package cz.jirik.quantdrop;
+package com.djdevs.quantdrop;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

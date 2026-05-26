@@ -5,20 +5,20 @@
 	"name": "QuantDrop",
 	"description": "Client-side Fabric mod for quickly dropping items from open containers.",
 	"authors": [
-		"jirik"
+		"DJDevs"
 	],
 	"contact": {
-		"sources": "https://github.com/jirik/quantdrop"
+		"sources": "https://github.com/djnejk/QuantDrop"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/quantdrop/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"cz.jirik.quantdrop.QuantDropMod"
+			"com.djdevs.quantdrop.QuantDropMod"
 		],
 		"client": [
-			"cz.jirik.quantdrop.client.QuantDropClient"
+			"com.djdevs.quantdrop.client.QuantDropClient"
 		]
 	},
 	"mixins": [

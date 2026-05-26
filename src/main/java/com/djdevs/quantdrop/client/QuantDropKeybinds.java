@@ -1,4 +1,4 @@
-package cz.jirik.quantdrop.client;
+package com.djdevs.quantdrop.client;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;

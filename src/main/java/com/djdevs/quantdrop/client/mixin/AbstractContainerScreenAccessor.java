@@ -1,4 +1,4 @@
-package cz.jirik.quantdrop.client.mixin;
+package com.djdevs.quantdrop.client.mixin;
 
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.world.inventory.Slot;

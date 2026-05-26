@@ -1,6 +1,6 @@
-package cz.jirik.quantdrop.client.mixin;
+package com.djdevs.quantdrop.client.mixin;
 
-import cz.jirik.quantdrop.client.QuantDropKeybinds;
+import com.djdevs.quantdrop.client.QuantDropKeybinds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.input.KeyEvent;
