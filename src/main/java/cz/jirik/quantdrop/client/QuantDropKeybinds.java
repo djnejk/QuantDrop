@@ -1,10 +1,10 @@
 package cz.jirik.quantdrop.client;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.resources.Identifier;
 
 public final class QuantDropKeybinds {
@@ -27,34 +27,24 @@ public final class QuantDropKeybinds {
 	}
 
 	public static void initialize() {
-		ClientTickEvents.END_CLIENT_TICK.register(QuantDropKeybinds::handleTick);
 	}
 
-	private static void handleTick(Minecraft client) {
-		while (DROP_CONTAINER.consumeClick()) {
-			if (hasRequiredModifiers(client)) {
-				QuantDropActions.dropOpenContainer(client);
-			}
+	public static boolean handleScreenKeyPressed(Minecraft client, KeyEvent event) {
+		if (DROP_CONTAINER.matches(event) && hasRequiredModifiers(event)) {
+			QuantDropActions.dropOpenContainer(client);
+			return true;
 		}
 
-		while (DROP_MATCHING.consumeClick()) {
-			if (hasRequiredModifiers(client)) {
-				QuantDropActions.dropMatchingHoveredStack(client);
-			}
+		if (DROP_MATCHING.matches(event) && hasRequiredModifiers(event)) {
+			QuantDropActions.dropMatchingHoveredStack(client);
+			return true;
 		}
+
+		return false;
 	}
 
-	static boolean hasRequiredModifiers(Minecraft client) {
-		return isControlDown(client) && isAltDown(client);
-	}
-
-	private static boolean isControlDown(Minecraft client) {
-		return InputConstants.isKeyDown(client.getWindow(), InputConstants.KEY_LCONTROL)
-			|| InputConstants.isKeyDown(client.getWindow(), InputConstants.KEY_RCONTROL);
-	}
-
-	private static boolean isAltDown(Minecraft client) {
-		return InputConstants.isKeyDown(client.getWindow(), InputConstants.KEY_LALT)
-			|| InputConstants.isKeyDown(client.getWindow(), InputConstants.KEY_RALT);
+	private static boolean hasRequiredModifiers(KeyEvent event) {
+		int modifiers = event.modifiers();
+		return (modifiers & InputConstants.MOD_CONTROL) != 0 && (modifiers & InputConstants.MOD_ALT) != 0;
 	}
 }

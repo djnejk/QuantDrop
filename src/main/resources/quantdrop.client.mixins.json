@@ -3,7 +3,8 @@
 	"package": "cz.jirik.quantdrop.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"AbstractContainerScreenAccessor"
+		"AbstractContainerScreenAccessor",
+		"AbstractContainerScreenKeyPressedMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
