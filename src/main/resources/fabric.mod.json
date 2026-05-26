@@ -12,7 +12,7 @@
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/quantdrop/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"cz.jirik.quantdrop.QuantDropMod"
@@ -22,10 +22,7 @@
 		]
 	},
 	"mixins": [
-		{
-			"config": "quantdrop.client.mixins.json",
-			"environment": "client"
-		}
+		"quantdrop.client.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
