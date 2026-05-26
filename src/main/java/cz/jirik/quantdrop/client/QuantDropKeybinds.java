@@ -16,6 +16,12 @@ public final class QuantDropKeybinds {
 		InputConstants.KEY_EQUALS,
 		CATEGORY
 	));
+	private static final KeyMapping DROP_MATCHING = KeyMappingHelper.registerKeyMapping(new KeyMapping(
+		"key.quantdrop.drop_matching",
+		InputConstants.Type.KEYSYM,
+		InputConstants.KEY_LBRACKET,
+		CATEGORY
+	));
 
 	private QuantDropKeybinds() {
 	}
@@ -28,6 +34,12 @@ public final class QuantDropKeybinds {
 		while (DROP_CONTAINER.consumeClick()) {
 			if (hasRequiredModifiers(client)) {
 				QuantDropActions.dropOpenContainer(client);
+			}
+		}
+
+		while (DROP_MATCHING.consumeClick()) {
+			if (hasRequiredModifiers(client)) {
+				QuantDropActions.dropMatchingHoveredStack(client);
 			}
 		}
 	}

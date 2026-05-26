@@ -1,4 +1,5 @@
 {
 	"key.categories.quantdrop.quantdrop": "QuantDrop",
-	"key.quantdrop.drop_container": "Drop open container contents"
+	"key.quantdrop.drop_container": "Drop open container contents",
+	"key.quantdrop.drop_matching": "Drop matching hovered item"
 }

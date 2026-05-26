@@ -1,4 +1,5 @@
 {
 	"key.categories.quantdrop.quantdrop": "QuantDrop",
-	"key.quantdrop.drop_container": "Vyhodit obsah otevreneho kontejneru"
+	"key.quantdrop.drop_container": "Vyhodit obsah otevreneho kontejneru",
+	"key.quantdrop.drop_matching": "Vyhodit stejne itemy pod kurzorem"
 }
